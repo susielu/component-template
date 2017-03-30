@@ -1,14 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router';
 import { PrismCode } from 'react-prism';
 import { dedent } from 'dentist';
-import {
-  Jumbotron,
-  Button,
-  Container,
-  Col,
-  Row
-} from 'reactstrap';
+
 import { HelloWorld } from '../components';
 
 const example = dedent(`
@@ -26,26 +19,22 @@ const example = dedent(`
 
 const Home = ({title, gh}) => {
   return (
-    <div>
-      <Jumbotron tag="section" className="jumbotron-header text-center my-5">
-        <Container fluid>
-          <Row>
-            <Col sm={{ size: 10, offset: 1}}>
-              <h1 className="display-4">{title}</h1>
-              <p className="lead my-3">
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-xs-8 col-xs-offset-2">
+          <header className="box-row center">
+              <h1 className="">{title}</h1>
+              <p className="">
                 An example reactstrap component built, documented & published with <a href="https://github.com/reactstrap/component-template">Component Template</a>
               </p>
               <p>
-                <Button outline color="danger" href={`https://github.com/${gh}`}>View on Github</Button>
-                <Button tag={Link} color="danger" to="/documentation">Documentation</Button>
+                <button href={`https://github.com/${gh}`}>View on Github</button>
               </p>
-            </Col>
-          </Row>
-        </Container>
-      </Jumbotron>
-      <Container fluid>
-        <Row>
-          <Col sm={{ size: 8, offset: 2 }}>
+            </header>
+        </div>
+      </div>
+        <div className="row">
+          <div className="col-xs-8 col-xs-offset-2">
             <h2>Getting Started</h2>
             <hr/>
             <p>
@@ -67,9 +56,8 @@ const Home = ({title, gh}) => {
                 {example}
               </PrismCode>
             </pre>
-          </Col>
-        </Row>
-      </Container>
+        </div>
+      </div>
     </div>
   );
 }

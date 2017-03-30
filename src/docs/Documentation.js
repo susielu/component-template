@@ -1,15 +1,16 @@
 import React from 'react';
-import LayoutContent from './layout/Content';
 
 import HelloWorldDocs from './components/HelloWorldDocs';
 
 const Documentation = () => {
   return (
-    <div>
-      <LayoutContent>
+  <div className="container-fluid">
+      <div className="row">
+        <div className="col-xs-8 col-xs-offset-2">
         <HelloWorldDocs />
-      </LayoutContent>
+      </div>
     </div>
+  </div>
   );
 }
 

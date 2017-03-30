@@ -1,10 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import {
-  Jumbotron,
-  Container,
-  Col,
-  Row
-} from 'reactstrap';
 
 const propTypes = {
   name: PropTypes.string,
@@ -18,22 +12,15 @@ const defaultProps = {
 
 class HelloWorld extends Component {
   render() {
-    const { name, message, children } = this.props;
+    const { name, message } = this.props;
 
     return (
-      <Jumbotron className="text-xs-center">
-        <Container fluid>
-          <Row>
-            <Col>
-              <h1 className="display-4">Hello {name}!</h1>
-              <p className="lead">
-                {message}
-              </p>
-              {children}
-            </Col>
-          </Row>
-        </Container>
-      </Jumbotron>
+      <div>
+      <h1 className="">Hello {name}!</h1>
+      <p className="lead">
+        {message}
+      </p>
+      </div>
     );
   }
 }
